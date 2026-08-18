@@ -1,0 +1,401 @@
+/* ==========================
+GLOBAL
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:#eef3f8;
+
+overflow:hidden;
+
+width:100vw;
+
+height:100vh;
+
+}
+
+/* ==========================
+HEADER
+========================== */
+
+.display-header{
+
+height:90px;
+
+background:#003366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+padding:10px;
+
+}
+
+.display-logo{
+
+width:70px;
+
+height:70px;
+
+background:white;
+
+border-radius:50%;
+
+padding:5px;
+
+object-fit:contain;
+
+}
+
+.display-title{
+
+text-align:center;
+
+color:white;
+
+}
+
+.display-title h1{
+
+font-size:32px;
+
+}
+
+.display-title h2{
+
+font-size:18px;
+
+color:#FFD54F;
+
+margin-top:5px;
+
+}
+
+/* ==========================
+TOP BAR
+========================== */
+
+.top-bar{
+
+height:45px;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+background:#0b5ea8;
+
+color:white;
+
+font-size:17px;
+
+font-weight:bold;
+
+}
+
+/* ==========================
+MAIN DISPLAY
+========================== */
+
+.display-container{
+
+height:calc(100vh - 135px);
+
+padding:10px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+/* ==========================
+SLIDESHOW
+========================== */
+
+.slideshow{
+
+flex:1;
+
+background:white;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.20);
+
+overflow:hidden;
+
+position:relative;
+
+display:flex;
+
+margin-bottom:10px;
+
+}
+
+.slide-panel{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:10px;
+
+background:white;
+
+}
+
+.slide-panel-left{
+
+border-right:2px solid #e5e7eb;
+
+}
+
+.slide-panel-right{
+
+background:linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.slideshow img{
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
+background:white;
+
+border-radius:10px;
+
+}
+
+#slideSecondaryImage{
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
+display:block;
+
+border-radius:10px;
+
+}
+
+.slide-content{
+
+width:100%;
+
+max-width:100%;
+
+background:#ffffff;
+
+color:#003366;
+
+padding:12px 16px;
+
+border-radius:12px;
+
+text-align:left;
+
+box-shadow:0 16px 30px rgba(0,0,0,.08);
+
+position:static;
+
+transform:none;
+
+}
+
+.slide-content h2{
+
+font-size:18px;
+
+margin-bottom:8px;
+
+color:#003366;
+
+}
+
+.slide-content p{
+
+font-size:14px;
+
+line-height:1.5;
+
+margin:0;
+
+}
+
+/* ==========================
+BOTTOM SECTION
+========================== */
+
+.bottom-section{
+
+display:flex;
+
+gap:15px;
+
+height:130px;
+
+margin-bottom:8px;
+
+}
+
+.timetable-card{
+
+flex:1;
+
+background:white;
+
+border-radius:12px;
+
+padding:10px;
+
+box-shadow:0 5px 12px rgba(0,0,0,.18);
+
+}
+
+.timetable-card h3{
+
+text-align:center;
+
+color:#003366;
+
+margin-bottom:8px;
+
+}
+
+.timetable-card table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+.timetable-card th{
+
+background:#003366;
+
+color:white;
+
+padding:8px;
+
+font-size:14px;
+
+}
+
+.timetable-card td{
+
+border:1px solid #ddd;
+
+padding:8px;
+
+text-align:center;
+
+font-size:13px;
+
+}
+
+/* ==========================
+TICKER
+========================== */
+
+.ticker{
+
+height:40px;
+
+background:#FFD54F;
+
+border-radius:8px;
+
+display:flex;
+
+align-items:center;
+
+padding:0 10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#000;
+
+}
+
+.ticker marquee{
+
+width:100%;
+
+}
+
+.urgent-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.urgent-popup.hidden {
+  display: none;
+}
+
+.urgent-popup-box {
+  background: white;
+  color: #003366;
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.urgent-popup-box h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.urgent-popup-box p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.urgent-popup-box button {
+  border: none;
+  background: #003366;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}

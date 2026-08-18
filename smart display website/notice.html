@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>KLS VDIT - Notice Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📢 Notice Management</h1>
+
+<label>Notice Title</label>
+<input type="text" id="noticeTitle" placeholder="Enter Notice Title">
+
+<label>Notice Description</label>
+<textarea id="noticeDescription" rows="5"
+placeholder="Enter Notice Description"></textarea>
+
+<label>Notice Category</label>
+
+<select id="noticeCategory">
+
+<option>General</option>
+
+<option>Exam</option>
+
+<option>Placement</option>
+
+<option>Workshop</option>
+
+<option>Event</option>
+
+<option>Holiday</option>
+
+</select>
+
+<br><br>
+
+<label>Notice Priority</label>
+
+<select id="noticePriority">
+
+<option>Normal</option>
+
+<option>Important</option>
+
+<option>Urgent</option>
+
+</select>
+
+<br><br>
+
+<label>Notice Expiry</label>
+
+<select id="noticeExpiry">
+
+<option>1 Hour</option>
+
+<option>8 Hours</option>
+
+<option>1 Day</option>
+
+<option>1 Week</option>
+
+<option>1 Month</option>
+
+</select>
+
+<br><br>
+
+<label>Upload Notice Images</label>
+
+<input
+type="file"
+id="noticeImages"
+multiple
+accept="image/*">
+
+<br><br>
+
+<button onclick="saveNotice()">
+💾 Save Notice
+</button>
+
+<button onclick="window.location='dashboard.html'">
+⬅ Back to Dashboard
+</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
