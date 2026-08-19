@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KLS VDIT Smart Display</title>
+
+<link rel="stylesheet" href="css/display.css">
+
+</head>
+
+<body>
+
+<div id="urgentPopup" class="urgent-popup hidden">
+  <div class="urgent-popup-box">
+    <h3>⚠ Important Notice</h3>
+    <p id="urgentMessageText">Message</p>
+    <button id="urgentCloseButton">Close</button>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+
+<div class="display-header">
+
+<img src="images/Screenshot 2026-07-25 125417.png" class="display-logo">
+
+<div class="display-title">
+
+<h1>KLS VDIT</h1>
+
+<h2>Smart Digital Information System</h2>
+
+</div>
+
+<img src="images/vdit logo.jpeg" class="display-logo">
+
+</div>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+<div>📅 <span id="date"></span></div>
+
+<div>📆 <span id="day"></span></div>
+
+<div>🕒 <span id="clock"></span></div>
+
+<div>🌤 <span id="weather">Loading...</span></div>
+
+<div>☀ Solar : <span id="solarPower">0 kWh</span></div>
+
+</div>
+
+<!-- ================= MAIN DISPLAY ================= -->
+
+<div class="display-container">
+
+<div class="slideshow">
+
+    <div class="slide-panel slide-panel-left">
+        <img id="slideImage" src="images/topper.jpg" alt="Slide">
+    </div>
+
+    <div class="slide-panel slide-panel-right">
+        <img id="slideSecondaryImage" src="images/workshop.jpg" alt="Secondary Slide">
+        <div class="slide-content">
+            <h2 id="slideTitle">Congratulations to the 6th Semester Toppers</h2>
+            <p id="slideCaption">Your hard work and dedication inspire the entire EEE Department.</p>
+        </div>
+    </div>
+
+</div>
+<!-- ================= TIMETABLE ================= -->
+
+<div class="bottom-section">
+
+<div class="timetable-card">
+
+<h3>📚 Section 5A</h3>
+
+<table>
+
+<tr>
+
+<th>Faculty</th>
+
+<th>Subject</th>
+
+<th>Time</th>
+
+</tr>
+
+<tr>
+
+<td id="displayFacultyA">-</td>
+
+<td id="displaySubjectA">-</td>
+
+<td id="displayTimeA">-</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="timetable-card">
+
+<h3>📚 Section 5B</h3>
+
+<table>
+
+<tr>
+
+<th>Faculty</th>
+
+<th>Subject</th>
+
+<th>Time</th>
+
+</tr>
+
+<tr>
+
+<td id="displayFacultyB">-</td>
+
+<td id="displaySubjectB">-</td>
+
+<td id="displayTimeB">-</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ================= RUNNING TICKER ================= -->
+
+<div class="ticker">
+
+<marquee id="runningText" scrollamount="8">
+
+Welcome to KLS VDIT Smart Digital Information System
+
+</marquee>
+
+</div>
+
+</div>
+
+<script src="js/script.js"></script>\r\n</body>
+</html>
+
+

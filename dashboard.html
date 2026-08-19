@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KLS VDIT Administrator Portal</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+<!-- HEADER -->
+
+<div class="dashboard-header">
+
+<img src="images/Screenshot 2026-07-25 125417.png" class="header-logo">
+
+<div class="header-title">
+
+<h1>KLS VDIT</h1>
+
+<h2>Smart Digital Information System</h2>
+
+<p>Administrator Dashboard</p>
+
+</div>
+
+<img src="images/vdit logo.jpeg" class="header-logo">
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="dashboard-container">
+
+<!-- =========================
+SLIDESHOW MANAGEMENT
+========================= -->
+
+<div class="card">
+
+<h2>🖼 Slideshow Management</h2>
+
+<label>Upload Images</label>
+
+<input
+    type="file"
+    id="slideImages"
+    accept="image/*"
+    multiple>
+
+<div id="selectedImagesContainer"></div>
+
+<br>
+
+<button onclick="addSlides()">
+    ➕ Upload Images
+</button>
+
+<div
+    id="uploadMessage"
+    style="margin-top:10px;color:green;">
+</div>
+
+</div>
+
+
+<!-- =========================
+IMPORTANT MESSAGE
+========================= -->
+
+<div class="card">
+
+<h2>🚨 Important Message</h2>
+
+<label>Message</label>
+
+<textarea
+    id="importantMessageText"
+    rows="3"
+    placeholder="Enter urgent message"></textarea>
+
+<label>Expiry Time</label>
+
+<select id="importantMessageExpiry">
+
+<option value="never">No Expiry</option>
+<option value="1h">1 Hour</option>
+<option value="8h">8 Hours</option>
+<option value="1d">1 Day</option>
+<option value="1w">1 Week</option>
+<option value="1m">1 Month</option>
+
+</select>
+
+<br><br>
+
+<button onclick="saveImportantMessage()">
+💾 Save Important Message
+</button>
+
+</div>
+
+
+<!-- =========================
+NOTICE MANAGEMENT
+========================= -->
+
+<div class="card">
+
+<h2>📢 Notice Management</h2>
+
+<label>Notice Title</label>
+
+<input
+type="text"
+id="noticeTitle"
+placeholder="Enter Notice Title">
+
+<label>Notice Description</label>
+
+<textarea
+id="noticeDescription"
+rows="4"
+placeholder="Enter Notice Description"></textarea>
+
+<label>Upload Notice Image</label>
+
+<input
+type="file"
+id="noticeImage"
+accept="image/*">
+
+<br><br>
+
+<button onclick="saveNotice()">
+
+💾 Save Notice
+
+</button>
+
+</div>
+
+<!-- =========================
+SOLAR MANAGEMENT
+========================= -->
+
+<div class="card">
+
+<h2>☀ Solar Power Generation</h2>
+
+<label>Today's Solar Generation (kWh)</label>
+
+<input
+type="number"
+id="solar"
+placeholder="Enter Solar Generation">
+
+<br><br>
+
+<button onclick="saveSolar()">
+
+💾 Update Solar
+
+</button>
+
+</div>
+
+<!-- =========================
+RUNNING TICKER
+========================= -->
+
+<div class="card">
+
+<h2>📰 Running Ticker</h2>
+
+<label>Running Text</label>
+
+<textarea
+
+id="ticker"
+
+rows="4"
+
+placeholder="Admissions Open | IEEE Workshop | Placement Drive | Results Announced">
+
+</textarea>
+
+<br><br>
+
+<button onclick="saveTicker()">
+
+💾 Update Ticker
+
+</button>
+
+</div>
+<!-- =========================
+TIMETABLE MANAGEMENT
+========================= -->
+
+<div class="card">
+
+<h2>📚 Timetable Management</h2>
+
+<div class="timetable-container">
+
+<!-- Section 5A -->
+
+<div class="class-box">
+
+<h3>🅰 Section 5A</h3>
+
+<label>Faculty</label>
+
+<input
+type="text"
+id="facultyA"
+placeholder="Faculty Name">
+
+<label>Subject</label>
+
+<input
+type="text"
+id="subjectA"
+placeholder="Subject Name">
+
+<label>Time</label>
+
+<input
+type="text"
+id="timeA"
+placeholder="10:00 AM - 11:00 AM">
+
+</div>
+
+<!-- Section 5B -->
+
+<div class="class-box">
+
+<h3>🅱 Section 5B</h3>
+
+<label>Faculty</label>
+
+<input
+type="text"
+id="facultyB"
+placeholder="Faculty Name">
+
+<label>Subject</label>
+
+<input
+type="text"
+id="subjectB"
+placeholder="Subject Name">
+
+<label>Time</label>
+
+<input
+type="text"
+id="timeB"
+placeholder="11:15 AM - 12:15 PM">
+
+</div>
+
+</div>
+
+<br>
+
+<button onclick="saveTimetable()">
+
+💾 Save Timetable
+
+</button>
+
+</div>
+
+<!-- =========================
+SMART DISPLAY CONTROL
+========================= -->
+
+<div class="card">
+
+<h2>🖥 Smart Display Control</h2>
+
+<div class="control-buttons">
+
+<button class="green-btn"
+onclick="updateDisplay()">
+
+🔄 Update Display
+
+</button>
+
+<button class="blue-btn"
+onclick="window.open('display.html')">
+
+👀 Preview Display
+
+</button>
+
+<button class="orange-btn"
+onclick="startDisplay()">
+
+▶ Start Display
+
+</button>
+
+<button class="red-btn"
+onclick="stopDisplay()">
+
+⏹ Stop Display
+
+</button>
+
+<button class="gray-btn"
+onclick="window.location.href='login.html'">
+
+🚪 Logout
+
+</button>
+
+
+
+
+
+
+<br><br>
+
+<button onclick="addSlides()">
+  ➕ Upload Slides
+</button>
+
+<div id="uploadMessage" style="margin-top: 10px; color: green;"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
